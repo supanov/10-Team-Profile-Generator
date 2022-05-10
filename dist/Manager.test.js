@@ -31,6 +31,13 @@ describe("Manager", () => {
         const manageremail = manager.getEmail();
         expect(manageremail).toBe(email);
     });
+    it("should get role via getRole()", () => {
+        const role = "Manager";
+        const manager = new Manager ("Max", 100, "test@test.com", role);
+        const managerrole = manager.getRole ();
+        expect(managerrole).toBe(role);
+
+    });
     it("should get officeNumber via getOfficeNumber()", () => {
         const officeNumber = 102
         const manager = new Manager("Max", 100, "test@test.com", officeNumber)
